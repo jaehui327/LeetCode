@@ -3,9 +3,12 @@ class Solution {
         var prefix = ""
         for word in words {
             prefix += word
+            if prefix.count > s.count {
+                return false
+            }
             if s == prefix {
                 return true
-            }
+            }            
         }
         return false
     }

@@ -16,9 +16,9 @@
 class Solution {
     var result = 0
     
-    func preorder(_ node: TreeNode?, _ val: Int) {
+    func preorder(_ node: TreeNode?, _ currentNum: Int) {
         if node != nil {
-            let num = (val << 1) | node!.val
+            let num = (currentNum << 1) | node!.val
             if node?.left == nil, node?.right == nil {
                 result += num
             }
